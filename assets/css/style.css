@@ -1,0 +1,620 @@
+/* HEADER */
+.hotline {
+    width: 366px;
+    height: 50px;
+    gap: 32px;
+    padding: 8px 16px 8px 8px;
+    border-radius: 100px;
+    background: #0000004D;
+    backdrop-filter: blur(37.42px);
+}
+
+.phone-number {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5%;
+    color: #FFFFFF;
+}
+
+
+/* MAIN */
+.bg-img-1,
+.bg-img-2,
+.bg-img-3,
+.bg-img-4 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Hình ảnh nền */
+.bg-img-1 {
+    background-image:
+        linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%),
+        url('../images/Reflective\ Building\ Grayscale.png');
+}
+
+.bg-img-2 {
+    background-image: url('../images/City\ Building\ Census\ Concept.png');
+}
+
+.bg-img-3 {
+    background-image: url('../images/Brutalist\ Architecture.png');
+}
+
+.bg-img-4 {
+    background-image: url('../images/Factory\ hallway.png');
+}
+
+.bg-black-friday {
+    background-image: url('../images/TNL\ Plaza.png');
+    height: 160px;
+}
+
+/* Lớp overlay */
+.bg-overlay-col-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%);
+    transition: background 0.5s ease-in-out;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Khi hover vào cột, gradient thay đổi */
+.hover-col:hover .bg-overlay {
+    background: linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%);
+}
+
+/* Hiệu ứng hover mở rộng cột */
+.hover-col {
+    transition: flex 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.hover-col:hover {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.custom-header {
+    height: 55px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-header-capital {
+    height: 55px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-header-shopping-mall {
+    height: 55px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Văn bản gradient */
+.custom-text-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    line-height: 23.44px;
+    background: linear-gradient(180deg, #F5F5F5 -1.11%, #8F8F8F 98.89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-container-capital {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.custom-container-shopping-mall {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    height: 96px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.capital-title {
+    width: auto;
+    height: 23px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5%;
+    text-align: center;
+    background: linear-gradient(90deg, #FDB913 0%, #F15A22 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.capital-content {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+}
+
+.bg-black-friday {
+    background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%),
+        url('../images/TNL\ Plaza.png') no-repeat center center/cover;
+    height: 160px;
+}
+
+
+.hotline-button {
+    width: 218px;
+    height: 40px;
+    border-width: 1px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    gap: 4px;
+    border-radius: 6px;
+    border: 1px solid #F7F7F7;
+}
+
+.hotline-text {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+}
+
+
+.custom-text-project {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    line-height: 23.44px;
+    background: linear-gradient(180deg, #4A4D4F 2.17%, #AAB0B5 40.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.line-text {
+    width: 100px;
+    border: none;
+    border-top: 3px solid;
+    border-image-source: linear-gradient(95.8deg, #F15A22 32.96%, #FDB913 100.17%);
+    border-image-slice: 1;
+}
+
+.img-new-project {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.img-new-project:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.custom-text-new-project {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5%;
+    color: #272727;
+}
+
+.custom-text-new-project-caption {
+    height: 45px;
+    font-family: Calibri;
+    font-weight: 400px;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
+    color: #636669;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.img-feature-project {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-feature-project:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.floor-plan {
+    height: 1042px;
+    background: #272727;
+}
+
+.img-floor-plan-overlay {
+    background-image:
+        linear-gradient(180deg, #272727 5.38%, rgba(0, 0, 0, 0) 55.14%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 56.45%, #272727 101.1%),
+        url('../images/Rox\ Tower1.png');
+    height: 753px;
+    width: 100%;
+    margin-top: 53px;
+}
+
+.filter-floor-plan {
+    background: linear-gradient(0deg, #4A4D4F, #4A4D4F),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    height: 76px;
+}
+
+.custom-text-floor-plan {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.53px;
+    letter-spacing: 0%;
+    color: #EFF0F0;
+}
+
+.custom-text-floor-plan-caption {
+    font-family: Calibri;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.09px;
+    letter-spacing: 0%;
+    color: #919498;
+    margin-top: 5px;
+}
+
+.btn-search-now {
+    max-width: 219px;
+    min-width: none;
+    padding: 16px 42px;
+    height: 52px;
+    gap: 12px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #FDB913 0%, #F15A22 100%);
+}
+
+.custom-text-floor-plan-detail {
+    font-family: Calibri;
+    font-weight: 700px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1%;
+    color: #F7F7F7;
+}
+
+.explore-more {
+    width: 159px;
+    height: 36px;
+    border-radius: 4px;
+    border-width: 1px;
+    border: 1px solid #EFF0F0
+}
+
+.custom-text-explore-more {
+    font-family: Calibri;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
+    color: #D9D9D9;
+}
+
+.image-logo-custmer {
+    width: auto;
+    height: 54px;
+    object-fit: cover;
+}
+
+.see-more-news {
+    width: 100%;
+    height: 150px;
+}
+
+.custom-text-see-more-news {
+    height: 50px;
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5%;
+    text-align: justify;
+    color: linear-gradient(0deg, #4A4D4F, #4A4D4F),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.custom-text-see-more-news-caption {
+    height: 50px;
+    font-family: Calibri;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
+    color: #636669;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.img-see-more-news {
+    height: 150px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.img-see-more-news:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.img-see-more-news-overlay {
+    background: linear-gradient(105.59deg, rgba(0, 0, 0, 0.4) 0.61%, rgba(0, 0, 0, 0) 100.03%);
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.bg-form-register {
+    background: linear-gradient(160.87deg, rgba(253, 185, 19, 0) 40.91%, #F26021 131.3%),
+        url('../images/bg-form-login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 846px;
+    padding: 64px 80px;
+}
+
+.frm-register {
+    width: 480px;
+    height: 711px;
+    gap: 32px;
+    border-radius: 6px;
+    padding: 32px;
+    background: #00000066;
+    backdrop-filter: blur(5px);
+}
+
+.input-form-register {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0px 6px;
+    background: transparent;
+    color: white;
+    margin-top: 10px;
+}
+
+.input-form-register::placeholder {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-form-register-text-area {
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0px 6px;
+    background: transparent;
+    color: white;
+    margin-top: 10px;
+}
+
+.input-form-register-text-area::placeholder {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-register {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #FDB913 0%, #F15A22 100%);
+    color: white;
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1%;
+}
+
+/* FOOTER */
+
+footer {
+    background: #D9D9D9;
+    height: auto;
+    width: 100%;
+}
+
+.custom-text-footer {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5%;
+    color: #636669;
+}
+
+.custom-text-footer-caption {
+    font-family: Calibri, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
+    color: #505050;
+}
+
+/* MODAL */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9999;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.show .modal-content {
+    transform: translateX(0);
+}
+
+.modal-content {
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-text-modal {
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5%;
+    color: #ffffff;
+}
+
+.vi {
+    font-family: Public Sans, sans-serif;
+    font-weight: 500;
+    font-size: 13.6px;
+    line-height: 13.6px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.btn-login {
+    width: 200px;
+    height: 40px;
+    gap: 9.71px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-width: 1px;
+    border: 1px solid #D9D9D9;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #666;
+}
+
+.section-title {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid white;
+    margin-top: 20px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 5px 0;
+    padding-left: 5px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+}
