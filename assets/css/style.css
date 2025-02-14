@@ -18,8 +18,62 @@
     color: #FFFFFF;
 }
 
+.navbar-mb {
+    width: 100%;
+    height: 80px;
+    display: none;
+    justify-content: space-between;
+    background: #272727;
+    backdrop-filter: blur(37)
+}
+
+.logo-rox-mb {
+    width: 119px;
+    height: 15px;
+}
+
+.header {
+    position: absolute;
+}
+
+/* Tablet (từ 768px trở lên) */
+@media (max-width: 1024px) {}
+
+/* Mobile (từ 768px trở xuống) */
+@media (max-width: 768px) {
+    #nav-md {
+        display: none;
+    }
+
+    #nav-sm {
+        display: flex;
+    }
+
+    .header {
+        position: relative;
+    }
+}
 
 /* MAIN */
+
+/* Tablet (từ 768px trở lên) */
+@media (max-width: 1024px) {}
+
+#row-bg-top-sm {
+    display: none;
+}
+
+/* Mobile (từ 768px trở xuống) */
+@media (max-width: 768px) {
+    #row-bg-top-md {
+        display: none;
+    }
+
+    #row-bg-top-sm {
+        display: block;
+    }
+}
+
 .bg-img-1,
 .bg-img-2,
 .bg-img-3,
@@ -29,6 +83,17 @@
     background-position: center center;
     background-size: cover;
     height: 100vh;
+}
+
+.bg-img-1-mb,
+.bg-img-2-mb,
+.bg-img-3-mb,
+.bg-img-4-mb {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 22vh;
 }
 
 /* Hình ảnh nền */
@@ -47,6 +112,23 @@
 }
 
 .bg-img-4 {
+    background-image: url('../images/Factory\ hallway.png');
+}
+
+.bg-img-1-mb {
+    background-image:
+        url('../images/Reflective\ Building\ Grayscale.png');
+}
+
+.bg-img-2-mb {
+    background-image: url('../images/City\ Building\ Census\ Concept.png');
+}
+
+.bg-img-3-mb {
+    background-image: url('../images/Brutalist\ Architecture.png');
+}
+
+.bg-img-4-mb {
     background-image: url('../images/Factory\ hallway.png');
 }
 
@@ -76,12 +158,10 @@
     transition: background 0.5s ease-in-out;
 }
 
-/* Khi hover vào cột, gradient thay đổi */
 .hover-col:hover .bg-overlay {
     background: linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%);
 }
 
-/* Hiệu ứng hover mở rộng cột */
 .hover-col {
     transition: flex 0.5s ease-in-out, width 0.5s ease-in-out;
 }
@@ -184,10 +264,31 @@
     color: white;
 }
 
-.bg-black-friday {
+.bg-black-friday-md {
     background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%),
         url('../images/TNL\ Plaza.png') no-repeat center center/cover;
     height: 160px;
+}
+
+.bg-black-friday-sm {
+    display: none;
+    background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%),
+        url('../images/TNL\ Plaza.png') no-repeat center center/cover;
+    height: 160px;
+}
+
+/* Tablet (từ 768px trở lên) */
+@media (max-width: 1024px) {}
+
+/* Mobile (từ 768px trở xuống) */
+@media (max-width: 768px) {
+    .bg-black-friday-sm {
+        display: block;
+    }
+
+    .bg-black-friday-md {
+        display: none;
+    }
 }
 
 
@@ -238,7 +339,7 @@
 
 .img-new-project {
     width: 100%;
-    height: 450px;
+    height: 100%;
     object-fit: cover;
     border-radius: 6px;
     background-size: cover;
@@ -288,6 +389,19 @@
     cursor: pointer;
 }
 
+.project-sm{
+    display: none;
+}
+
+/* Mobile (từ 768px trở xuống) */
+@media (max-width: 768px) {
+    .project-sm{
+        display: block;
+    }
+    .project-md{
+        display: none;
+    }
+}
 
 .floor-plan {
     height: 1042px;
@@ -302,6 +416,7 @@
     height: 753px;
     width: 100%;
     margin-top: 53px;
+    background-size: cover;
 }
 
 .filter-floor-plan {
@@ -568,6 +683,7 @@ footer {
     line-height: 26px;
     letter-spacing: 0.5%;
     color: #ffffff;
+    margin-left: 50%;
 }
 
 .vi {
@@ -602,8 +718,21 @@ footer {
 .section-title {
     width: 100%;
     padding-top: 20px;
-    border-top: 1px solid white;
     margin-top: 20px;
+    text-align: right;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 25%;
+    /* Độ dài border */
+    border-top: 1px solid white;
+    position: absolute;
+    right: 0;
+    /* Canh phải */
+    top: 0;
 }
 
 a {
@@ -613,8 +742,20 @@ a {
     margin: 5px 0;
     padding-left: 5px;
     transition: color 0.3s ease;
+    text-align: right;
 }
 
 a:hover {
     color: white;
+}
+
+.modal-content-mb {
+    width: 25%;
+}
+
+/* Mobile (từ 768px trở xuống) */
+@media (max-width: 768px) {
+    .modal-content-mb {
+        width: 100%;
+    }
 }

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverColumns.forEach(column => {
         column.addEventListener("mouseenter", function () {
             if (!mainColumn.matches(":hover")) {
-                mainColumn.style.flex = "1"; 
+                mainColumn.style.flex = "1";
                 backgroundOverlay.classList.add("bg-overlay-col-main");
                 capitalHeader.style.display = "flex";
                 capitalContainer.style.display = "none";
@@ -44,10 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // MODAL
 const moModalBtn = document.querySelector(".btn-mo-modal");
+const moModalBtnMb = document.querySelector(".btn-mo-modal-mb");
 const dongModalBtn = document.querySelector(".btn-dong-modal");
 const nenMo = document.querySelector(".overlay");
 
 moModalBtn.addEventListener("click", () => {
+    nenMo.classList.add("show");
+});
+
+moModalBtnMb.addEventListener("click", () => {
     nenMo.classList.add("show");
 });
 
