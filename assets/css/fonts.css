@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Calibri-Regular';
+    src: url('../fonts/calibri-font-family/calibri-regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri-Bold';
+    src: url('../fonts/calibri-font-family/calibri-bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto/static/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/static/Roboto-Bold.ttf') format('truetype');
+    font-style: normal;
+}

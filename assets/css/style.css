@@ -10,7 +10,7 @@
 }
 
 .phone-number {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -36,43 +36,7 @@
     position: absolute;
 }
 
-/* Tablet (từ 768px trở lên) */
-@media (max-width: 1024px) {}
-
-/* Mobile (từ 768px trở xuống) */
-@media (max-width: 768px) {
-    #nav-md {
-        display: none;
-    }
-
-    #nav-sm {
-        display: flex;
-    }
-
-    .header {
-        position: relative;
-    }
-}
-
 /* MAIN */
-
-/* Tablet (từ 768px trở lên) */
-@media (max-width: 1024px) {}
-
-#row-bg-top-sm {
-    display: none;
-}
-
-/* Mobile (từ 768px trở xuống) */
-@media (max-width: 768px) {
-    #row-bg-top-md {
-        display: none;
-    }
-
-    #row-bg-top-sm {
-        display: block;
-    }
-}
 
 .bg-img-1,
 .bg-img-2,
@@ -98,9 +62,7 @@
 
 /* Hình ảnh nền */
 .bg-img-1 {
-    background-image:
-        linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%),
-        url('../images/Reflective\ Building\ Grayscale.png');
+    background-image: url('../images/Reflective\ Building\ Grayscale.png');
 }
 
 .bg-img-2 {
@@ -137,6 +99,29 @@
     height: 160px;
 }
 
+
+.black-friday-colection {
+    font-family: "Roboto-Regular", sans-serif;
+    width: 73px;
+    height: 17px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #F7F7F7;
+    text-transform: uppercase;
+}
+
+.black-friday {
+    width: 116px;
+    height: auto;
+    font-family: "Roboto-Bold", sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 24.17px;
+    color: #F7F7F7;
+    text-transform: uppercase;
+}
+
+
 /* Lớp overlay */
 .bg-overlay-col-main {
     position: absolute;
@@ -156,19 +141,6 @@
     height: 100%;
     background: linear-gradient(178.64deg, rgba(11, 29, 38, 0) 31.95%, #0B1D26 112.47%);
     transition: background 0.5s ease-in-out;
-}
-
-.hover-col:hover .bg-overlay {
-    background: linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%);
-}
-
-.hover-col {
-    transition: flex 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-
-.hover-col:hover {
-    flex: 0 0 50%;
-    max-width: 50%;
 }
 
 .custom-header {
@@ -201,9 +173,8 @@
     width: 100%;
 }
 
-/* Văn bản gradient */
 .custom-text-header {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 16px;
@@ -213,6 +184,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 .custom-container-capital {
     background: rgba(0, 0, 0, 0.4);
@@ -243,7 +215,7 @@
 .capital-title {
     width: auto;
     height: 23px;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto-Bold", sans-serif;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 5%;
@@ -255,7 +227,7 @@
 }
 
 .capital-content {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -277,20 +249,6 @@
     height: 160px;
 }
 
-/* Tablet (từ 768px trở lên) */
-@media (max-width: 1024px) {}
-
-/* Mobile (từ 768px trở xuống) */
-@media (max-width: 768px) {
-    .bg-black-friday-sm {
-        display: block;
-    }
-
-    .bg-black-friday-md {
-        display: none;
-    }
-}
-
 
 .hotline-button {
     width: 218px;
@@ -306,7 +264,7 @@
 }
 
 .hotline-text {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
@@ -316,9 +274,8 @@
     text-decoration: none;
 }
 
-
 .custom-text-project {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 18px;
@@ -337,6 +294,11 @@
     border-image-slice: 1;
 }
 
+#new-mb {
+    display: none;
+}
+
+
 .img-new-project {
     width: 100%;
     height: 100%;
@@ -347,6 +309,7 @@
     background-position: center center;
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
+    background-image: url(../images/tnl-plaza-tin-tuc.png);
 }
 
 .img-new-project:hover {
@@ -355,7 +318,7 @@
 }
 
 .custom-text-new-project {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -365,9 +328,9 @@
 
 .custom-text-new-project-caption {
     height: 45px;
-    font-family: Calibri;
-    font-weight: 400px;
-    font-size: 15px;
+    font-family: "Calibri-Regular";
+    font-weight: 400;
+    font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.5%;
     color: #636669;
@@ -389,23 +352,91 @@
     cursor: pointer;
 }
 
-.project-sm{
+.project-sm {
     display: none;
-}
-
-/* Mobile (từ 768px trở xuống) */
-@media (max-width: 768px) {
-    .project-sm{
-        display: block;
-    }
-    .project-md{
-        display: none;
-    }
 }
 
 .floor-plan {
     height: 1042px;
     background: #272727;
+}
+
+#floor-plan-mb {
+    display: none;
+}
+
+
+.form-floor-plan {
+    width: 90%;
+    height: auto;
+    border-radius: 6px;
+    border-width: 1px;
+    gap: 16px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6
+}
+
+.floor-plan-bg-mb {
+    background-color: rgb(247, 247, 247);
+}
+
+.custom-text-floor-plan-mb {
+    font-family: "Calibri-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.53px;
+    letter-spacing: 0%;
+    color: linear-gradient(0deg, #4A4D4F, #4A4D4F),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+
+.custom-text-floor-plan-caption-mb {
+    font-family: "Calibri-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.09px;
+    letter-spacing: 0%;
+    color: #7C8083;
+    margin-top: 5px;
+}
+
+.btn-search-now-mb {
+    width: 90%;
+    padding: 16px 42px;
+    margin: 0px auto;
+    height: 52px;
+    gap: 12px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #FDB913 0%, #F15A22 100%);
+}
+
+.explore-more-mb {
+    width: 100%;
+    height: 36px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border-width: 1px;
+    border: 1px solid #101515
+}
+
+.custom-text-explore-more-mb {
+    font-family: "Calibri-Regular";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
+    color: #2a1616;
+}
+
+.tnr-mb {
+    width: 100%;
+    height: 196px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.45%, #323334 101.1%),
+        linear-gradient(180deg, #323334 5.38%, rgba(0, 0, 0, 0) 55.14%),
+        url(../images/tnr-mb.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .img-floor-plan-overlay {
@@ -426,7 +457,7 @@
 }
 
 .custom-text-floor-plan {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 16px;
     line-height: 19.53px;
@@ -435,7 +466,7 @@
 }
 
 .custom-text-floor-plan-caption {
-    font-family: Calibri;
+    font-family: "Calibri-Regular";
     font-weight: 400;
     font-size: 14px;
     line-height: 17.09px;
@@ -455,7 +486,7 @@
 }
 
 .custom-text-floor-plan-detail {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700px;
     font-size: 12px;
     line-height: 20px;
@@ -472,7 +503,7 @@
 }
 
 .custom-text-explore-more {
-    font-family: Calibri;
+    font-family: "Calibri-Regular";
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -493,7 +524,7 @@
 
 .custom-text-see-more-news {
     height: 50px;
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -508,7 +539,7 @@
 
 .custom-text-see-more-news-caption {
     height: 50px;
-    font-family: Calibri;
+    font-family: "Calibri-Regular";
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
@@ -542,6 +573,20 @@
     border-radius: 6px;
 }
 
+.frm-register {
+    width: 480px;
+    height: 711px;
+    gap: 32px;
+    border-radius: 6px;
+    padding: 32px;
+    background: #00000066;
+    backdrop-filter: blur(5px);
+}
+
+#form-register-mb {
+    display: none;
+}
+
 .bg-form-register {
     background: linear-gradient(160.87deg, rgba(253, 185, 19, 0) 40.91%, #F26021 131.3%),
         url('../images/bg-form-login.jpg');
@@ -552,15 +597,6 @@
     padding: 64px 80px;
 }
 
-.frm-register {
-    width: 480px;
-    height: 711px;
-    gap: 32px;
-    border-radius: 6px;
-    padding: 32px;
-    background: #00000066;
-    backdrop-filter: blur(5px);
-}
 
 .input-form-register {
     width: 100%;
@@ -575,7 +611,7 @@
 }
 
 .input-form-register::placeholder {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -596,7 +632,7 @@
 }
 
 .input-form-register-text-area::placeholder {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -618,6 +654,20 @@
     letter-spacing: 1%;
 }
 
+.btn-register-mb {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 6px;
+    background: #ED1B34;
+    color: white;
+    font-family: Calibri;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1%;
+}
+
 /* FOOTER */
 
 footer {
@@ -627,16 +677,17 @@ footer {
 }
 
 .custom-text-footer {
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto-Bold", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.5%;
     color: #636669;
+    text-transform: uppercase;
 }
 
 .custom-text-footer-caption {
-    font-family: Calibri, sans-serif;
+    font-family: "Calibri-Regular", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
@@ -661,15 +712,6 @@ footer {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.overlay.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.overlay.show .modal-content {
-    transform: translateX(0);
-}
-
 .modal-content {
     color: white;
     transform: translateX(100%);
@@ -677,7 +719,7 @@ footer {
 }
 
 .custom-text-modal {
-    font-family: Calibri;
+    font-family: "Calibri-Bold";
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -687,13 +729,14 @@ footer {
 }
 
 .vi {
-    font-family: Public Sans, sans-serif;
+    font-family: "Public-Sans", sans-serif;
     font-weight: 500;
     font-size: 13.6px;
     line-height: 13.6px;
     letter-spacing: 0%;
     text-align: center;
     color: #ffffff;
+    text-transform: uppercase;
 }
 
 
@@ -742,20 +785,177 @@ a {
     margin: 5px 0;
     padding-left: 5px;
     transition: color 0.3s ease;
-    text-align: right;
+    text-align: left;
 }
 
 a:hover {
     color: white;
 }
 
+.a-modal {
+    text-align: right;
+}
+
 .modal-content-mb {
     width: 25%;
+}
+
+.follow-md {
+    display: flex;
+}
+
+.follow-mb {
+    display: none;
+}
+
+#row-bg-top-sm {
+    display: none;
+}
+
+/* Tablet (từ 768px trở lên) */
+@media (max-width: 1400px) {
+    .image-logo-custmer {
+        width: auto;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .custom-text-floor-plan {
+        font-family: "Calibri-Regular";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19.53px;
+        letter-spacing: 0%;
+        color: #EFF0F0;
+    }
+
+    .custom-text-floor-plan-caption {
+        font-family: "Calibri-Regular";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17.09px;
+        letter-spacing: 0%;
+        color: #919498;
+        margin-top: 5px;
+    }
 }
 
 /* Mobile (từ 768px trở xuống) */
 @media (max-width: 768px) {
     .modal-content-mb {
         width: 100%;
+    }
+
+    .custom-text-see-more-news {
+        height: 100%;
+        font-family: "Calibri-Regular";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.5%;
+        text-align: justify;
+        color: linear-gradient(0deg, #4A4D4F, #4A4D4F),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: inherit;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .follow-mb {
+        display: block;
+    }
+
+    .follow-md {
+        display: none;
+    }
+
+    #nav-md {
+        display: none;
+    }
+
+    #nav-sm {
+        display: flex;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    #row-bg-top-md {
+        display: none;
+    }
+
+    #row-bg-top-sm {
+        display: block;
+    }
+
+    .bg-black-friday-sm {
+        display: block;
+    }
+
+    .bg-black-friday-md {
+        display: none;
+    }
+
+    #new-md {
+        display: none;
+    }
+
+    #new-mb {
+        display: block;
+    }
+
+    .line-text {
+        width: 50px;
+        border: none;
+        border-top: 3px solid;
+        border-image-source: linear-gradient(95.8deg, #F15A22 32.96%, #FDB913 100.17%);
+        border-image-slice: 1;
+    }
+
+    #form-register-mb {
+        display: flex;
+    }
+
+    #form-register-md {
+        display: none;
+    }
+
+    .bg-form-register {
+        background: #272727;
+        backdrop-filter: blur(20px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 750px;
+        padding: 0px 0px;
+    }
+
+    .frm-register {
+        width: 100%;
+        height: auto;
+        gap: 32px;
+        border-radius: 6px;
+        background: transparent;
+        backdrop-filter: blur(0px);
+        margin: auto;
+    }
+
+    #floor-plan-md {
+        display: none;
+    }
+
+    #floor-plan-mb {
+        display: flex;
+    }
+
+    .project-sm {
+        display: block;
+    }
+
+    .project-md {
+        display: none;
     }
 }
