@@ -179,6 +179,7 @@
     text-align: center;
     font-size: 16px;
     line-height: 23.44px;
+    padding-left: 3%;
     background: linear-gradient(180deg, #F5F5F5 -1.11%, #8F8F8F 98.89%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -298,22 +299,27 @@
     display: none;
 }
 
-
 .img-new-project {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-new-project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/tnl-plaza-tin-tuc.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-    background-image: url(../images/tnl-plaza-tin-tuc.png);
 }
 
-.img-new-project:hover {
-    transform: scale(1.02);
+.img-new-project:hover::before {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -344,13 +350,16 @@
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
-    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .img-feature-project:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
+
 
 .project-sm {
     display: none;
@@ -512,9 +521,10 @@
 }
 
 .image-logo-custmer {
-    width: auto;
+    width: 100%;
     height: 54px;
-    object-fit: cover;
+    object-fit: contain;
+    background-position: center;
 }
 
 .see-more-news {
@@ -551,6 +561,7 @@
 }
 
 .img-see-more-news {
+    width: 100%;
     height: 150px;
     object-fit: contain;
     border-radius: 6px;
@@ -558,11 +569,19 @@
     background-repeat: no-repeat;
     background-position: center center;
     transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+}
+.img-see-more-news-mb {
+    height: 150px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .img-see-more-news:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -581,6 +600,18 @@
     padding: 32px;
     background: #00000066;
     backdrop-filter: blur(5px);
+    /* margin-left: 3%; */
+}
+
+.frm-register-mb {
+    width: 480px;
+    height: 100%;
+    gap: 32px;
+    border-radius: 6px;
+    padding: 32px;
+    background: #00000066;
+    backdrop-filter: blur(5px);
+    margin: 0 0;
 }
 
 #form-register-mb {
@@ -594,7 +625,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 846px;
-    padding: 64px 80px;
 }
 
 
@@ -788,8 +818,23 @@ a {
     text-align: left;
 }
 
-a:hover {
-    color: white;
+.a-img-instagram:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(58%) sepia(59%) saturate(2185%) hue-rotate(7deg) brightness(98%) contrast(104%);
+}
+
+.a-img-facebook:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7440%) hue-rotate(250deg) brightness(95%) contrast(144%);
+}
+
+.a-img-youtube:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(96%) saturate(7225%) hue-rotate(357deg) brightness(99%) contrast(119%);
+}
+
+.a-footer:hover {
+    color: red;
 }
 
 .a-modal {
@@ -810,6 +855,10 @@ a:hover {
 
 #row-bg-top-sm {
     display: none;
+}
+
+.parent:hover .ms-auto-arrow {
+    content: url("../images/arrow-red.svg");
 }
 
 /* Tablet (từ 768px trở lên) */
@@ -931,16 +980,6 @@ a:hover {
         background-position: center center;
         height: 750px;
         padding: 0px 0px;
-    }
-
-    .frm-register {
-        width: 100%;
-        height: auto;
-        gap: 32px;
-        border-radius: 6px;
-        background: transparent;
-        backdrop-filter: blur(0px);
-        margin: auto;
     }
 
     #floor-plan-md {

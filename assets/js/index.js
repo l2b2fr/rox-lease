@@ -1,6 +1,36 @@
 $(document).ready(function () {
+    // Mở mặc định phần tử đầu tiên
+    $('.hover-col').first().addClass('active');
+    $('.hover-col.active').find('.bg-overlay').css({
+        background: 'linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%)',
+        transition: 'background 0.5s ease-in-out'
+    });
+    $('.hover-col.active').css({
+        flex: '0 0 50%',
+        'max-width': '50%',
+        transition: 'flex 0.5s ease-in-out, max-width 0.5s ease-in-out'
+    });
+    $('.hover-col.active').find('.custom-header-shopping-mall').hide();
+    $('.hover-col.active').find('.custom-container-shopping-mall').css({
+        display: 'flex',
+        opacity: 1,
+        right: '0%',
+        transition: 'opacity 0.5s ease-in-out, right 0.5s ease-in-out'
+    });
+
     $('.hover-col').hover(
         function () {
+            // Ẩn tất cả các mục khác trước khi mở mục mới
+            $('.hover-col.active').removeClass('active').css({
+                flex: '',
+                'max-width': '',
+                transition: 'flex 0.5s ease-in-out, max-width 0.5s ease-in-out'
+            }).find('.bg-overlay').css({ background: '', transition: 'background 0.5s ease-in-out' });
+            $('.hover-col').find('.custom-container-shopping-mall').fadeOut(0);
+            $('.hover-col').find('.custom-header-shopping-mall').fadeIn(0);
+
+            // Mở mục được hover
+            $(this).addClass('active');
             $(this).find('.bg-overlay').css({
                 background: 'linear-gradient(156.44deg, rgba(253, 185, 19, 0) 35.4%, rgba(242, 96, 33, 0.9) 95.01%)',
                 transition: 'background 0.5s ease-in-out'
@@ -14,57 +44,32 @@ $(document).ready(function () {
             $(this).find('.custom-container-shopping-mall').css({
                 display: 'flex',
                 opacity: 0,
-                position: 'relative',
-                right: '-100%'
+                right: '-100%',
+                transition: 'opacity 0.5s ease-in-out, right 0.5s ease-in-out'
             }).animate({
                 right: '0%',
                 opacity: 1
             }, 100);
         },
         function () {
-            $(this).find('.bg-overlay').css({
-                background: '',
-                transition: 'background 0.5s ease-in-out'
-            });
-            $(this).css({
-                flex: '',
-                'max-width': '',
-                transition: 'flex 0.5s ease-in-out, max-width 0.5s ease-in-out'
-            });
-            $(this).find('.custom-container-shopping-mall').fadeOut(250, function () {
-                $(this).siblings('.custom-header-shopping-mall').fadeIn(0);
-            });
+            // Không làm gì khi rời chuột
         }
     );
 });
 
 
-// MODAL
-// const moModalBtn = document.querySelector(".btn-mo-modal");
-// const moModalBtnMb = document.querySelector(".btn-mo-modal-mb");
-// const dongModalBtn = document.querySelector(".btn-dong-modal");
-// const nenMo = document.querySelector(".overlay");
+// Vô hiệu hóa scroll
+const disableScroll = () => {
+    document.body.style.overflow = 'hidden';
+};
 
-// moModalBtn.addEventListener("click", () => {
-//     nenMo.classList.add("show");
-// });
-
-// moModalBtnMb.addEventListener("click", () => {
-//     nenMo.classList.add("show");
-// });
-
-// dongModalBtn.addEventListener("click", () => {
-//     nenMo.classList.remove("show");
-// });
-
-// nenMo.addEventListener("click", (e) => {
-//     if (e.target === nenMo) {
-//         nenMo.classList.remove("show");
-//     }
-// });
+// Bật lại scroll
+const enableScroll = () => {
+    document.body.style.overflow = 'auto';
+};
 
 $(document).ready(function () {
-    // Hiển thị overlay
+    // Hiển thị overlay và vô hiệu hóa scroll
     $('.btn-mo-modal').click(function () {
         $('.overlay').css({
             'opacity': '1',
@@ -73,10 +78,12 @@ $(document).ready(function () {
         $('.modal-content').css({
             'transform': 'translateX(0)'
         });
+
+        disableScroll(); // Chặn scroll khi mở modal
     });
 
-    // Ẩn overlay
-    $('#closeModal').click(function () {
+    // Ẩn overlay và bật lại scroll
+    $('.btn-dong-modal').click(function () {
         $('.overlay').css({
             'opacity': '0',
             'visibility': 'hidden'
@@ -84,16 +91,19 @@ $(document).ready(function () {
         $('.modal-content').css({
             'transform': 'translateX(100%)'
         });
+
+        enableScroll(); // Cho phép scroll khi đóng modal
     });
 });
 
+
 $(document).ready(function () {
-    $('.ms-auto').hover(
+    $('.ms-auto-arrow').hover(
         function () {
-            $(this).attr('src', './assets/images/arrow-red.svg'); // Ảnh thay thế khi hover
+            $(this).attr('src', './assets/images/arrow-red.svg');
         },
         function () {
-            $(this).attr('src', './assets/images/arrow-black.svg'); // Ảnh gốc khi rời chuột
+            $(this).attr('src', './assets/images/arrow-black.svg')
         }
     );
 });
@@ -101,10 +111,10 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.hover-arrow-top').hover(
         function () {
-            $(this).attr('src', './assets/images/arrow-red.svg'); // Ảnh thay thế khi hover
+            $(this).attr('src', './assets/images/arrow-red.svg');
         },
         function () {
-            $(this).attr('src', './assets/images/arrow-light.svg'); // Ảnh gốc khi rời chuột
+            $(this).attr('src', './assets/images/arrow-light.svg')
         }
     );
 });
@@ -127,7 +137,7 @@ function animateCounter(target, endValue) {
             trigger: `#${target}`,
             start: "top 80%",
             toggleActions: "play none none none",
-            onEnter: () => gsap.to(`#${target}`, { opacity: 1, duration: 0.5 }) // Hiển thị khi vào
+            onEnter: () => gsap.to(`#${target}`, { opacity: 1, duration: 0.5 })
         }
     });
 }

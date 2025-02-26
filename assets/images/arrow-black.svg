@@ -1,6 +1,9 @@
-<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.525358" y="1.15329" width="30.9493" height="30.9493" rx="15.4746" stroke="#272727" stroke-width="1.05072"/>
-<path d="M13.2905 19.4766L19.3284 14.2678" stroke="#272727" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19.3482 14.2511L14.8467 13.9082" stroke="#272727" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19.3482 14.25L19.0273 18.7531" stroke="#272727" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:1.05072;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(15.294118%,15.294118%,15.294118%);stroke-opacity:1;stroke-miterlimit:4;" d="M 16 1.1521 C 24.546875 1.1521 31.476562 8.080811 31.476562 16.628906 C 31.476562 25.172974 24.546875 32.101685 16 32.101685 C 7.453125 32.101685 0.523438 25.172974 0.523438 16.628906 C 0.523438 8.080811 7.453125 1.1521 16 1.1521 Z M 16 1.1521 " transform="matrix(1,0,0,0.969697,0,0)"/>
+<path style="fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(15.294118%,15.294118%,15.294118%);stroke-opacity:1;stroke-miterlimit:4;" d="M 13.289062 19.476929 L 19.328125 14.268311 " transform="matrix(1,0,0,0.969697,0,0)"/>
+<path style="fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(15.294118%,15.294118%,15.294118%);stroke-opacity:1;stroke-miterlimit:4;" d="M 19.347656 14.252197 L 14.847656 13.90979 " transform="matrix(1,0,0,0.969697,0,0)"/>
+<path style="fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(15.294118%,15.294118%,15.294118%);stroke-opacity:1;stroke-miterlimit:4;" d="M 19.347656 14.248169 L 19.027344 18.751831 " transform="matrix(1,0,0,0.969697,0,0)"/>
+</g>
 </svg>
